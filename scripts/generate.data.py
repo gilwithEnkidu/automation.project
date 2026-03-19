@@ -46,7 +46,7 @@ DILUTION      = "0.8810"
 INSTRUMENTS   = ["IC-5000-5 [p1]", "IC-5000-5 [p2]", "IC-5000-10 [p1]"]
 RUN_TIME      = "35.00"
 
-output_dir = "H:/00_python/automation.proj/raw.data"    # 경로 수정, 260319
+output_dir = os.path.expanduser("~/automation.proj/raw.data")    # 경로 수정, 260319
 os.makedirs(output_dir, exist_ok=True)
 
 def generate_value(p, is_outlier=False):
