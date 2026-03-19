@@ -1,6 +1,6 @@
 ###############################################################################
 # File Name : generate.raw.data.py
-# Author    : gilgamesh with Claude
+# Author    : gil
 # Date      : 2026.03.14
 # Version   : 0.2
 # Description: raw data 생성 프로그램
@@ -46,7 +46,7 @@ DILUTION      = "0.8810"
 INSTRUMENTS   = ["IC-5000-5 [p1]", "IC-5000-5 [p2]", "IC-5000-10 [p1]"]
 RUN_TIME      = "35.00"
 
-output_dir = "raw_data"
+output_dir = "H:/00_python/automation.proj/raw.data"    # 경로 수정, 260319
 os.makedirs(output_dir, exist_ok=True)
 
 def generate_value(p, is_outlier=False):
