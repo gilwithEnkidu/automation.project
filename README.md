@@ -1,4 +1,4 @@
-# automation project
+## automation project
 데이터의 취합 및 가공하여 보고서 발송에 이르는 파이프라인 구축 시뮬레이션
 <br>
 ## 구조
