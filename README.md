@@ -7,8 +7,10 @@
   + 'reports' 발송된 리포트 모음
   + 'scripts' 사용된 파이썬 코드 모음
 <br>
-## about scripts
+## scripts history
   + 'generate.raw.data.py'
+    + 260320 : 시그마 수정 및 질산염 표준편차 현실화
   + 'processed.data.py'
+    + 260320 : 최초 업로드
 <br>
 
