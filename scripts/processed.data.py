@@ -1,4 +1,4 @@
-시그마수정시그마###############################################################################
+###############################################################################
 # File Name : processing.data.py
 # Author    : gil
 # Date      : 2026.03.20
@@ -26,7 +26,7 @@ OUT_FILE  = os.path.join(OUT_DIR, f"processed_data_{date_str}.csv")
 os.makedirs(OUT_DIR, exist_ok=True)
 
 # spec 설정
-LIMITS = {
+SPEC = {
     "Cl": (0.03, 0.943),
     "NO2": (0.08, 0.453),
     "NO3": (0.07, 1.25),
@@ -47,7 +47,7 @@ for filename in os.listdir(RAW_DIR):
         parts = line.split("\t")
         analyte = parts[1]
         value = float(parts[2])
-        low, high = LIMITS[analyte]
+        low, high = SPEC[analyte]
         status = "ALERT" if value < low or value > high else "OK"
         results.append([filename, analyte, value, status])
 
