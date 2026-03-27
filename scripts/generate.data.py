@@ -13,6 +13,14 @@
 #
 ###############################################################################
 
+########### raw data example ###########
+#1| 5824 03/01 260301021   250.0    ㎍/L
+#2| 0.8810  IC-5000-5 [p1]  35.00
+#3| 1	Cl	0.2242
+#4| 2	NO2	0.2409
+#5| 3	NO3	0.3445
+#6| 4	SO4	0.7208
+#########################################
 
 import numpy as np
 import os
@@ -21,26 +29,29 @@ from datetime import date, timedelta
 
 # ── 사용자 설정 ──────────────────────────────────────────
 START_DATE  = date(2026, 3, 1)
-END_DATE    = date(2026, 3, 5)
-MAX_PER_DAY = 65
+END_DATE    = date(2026, 3, 31)
+MAX_PER_DAY = 65    # 하루 동안 생성되는 raw data 의 최대치
 
-# 이상치 설정
+# 이상치 설정, 발생확률 0.4%
 OUTLIER_PROB  = 0.004
 OUTLIER_SIGMA = 3.5
 
-# 결측치 설정, 한 파일에 analyte이 4개로 각각 독립적으로 적용
+# 결측치 설정, 전체 analyte 중 발생확률 0.3%, 한 파일마다 analyte이 4개 -> 각각 독립적으로 적용
 MISSING_PROB = 0.003 / 4
 # ────────────────────────────────────────────────────────
 
+# 탱크로리 차량 번호
 CAR_NUMBERS = ["8425", "5824", "8363", "8368", "5864", "5884"]
 
+# 각 analyte의 최대값,최소값,기대값,표준편차 - 정규분포를 고려하여 설정
 params = {
-    "Cl":  {"min": 0.03,  "max": 4.0,  "mean": 0.214, "std": 0.243},
+    "Cl" : {"min": 0.03,  "max": 4.0,  "mean": 0.214, "std": 0.243},
     "NO2": {"min": 0.08,  "max": 0.61, "mean": 0.193, "std": 0.0865},
     "NO3": {"min": 0.07,  "max": 5.1,  "mean": 0.584, "std": 0.222},
     "SO4": {"min": 0.17,  "max": 6.72, "mean": 0.628, "std": 0.123},
 }
 
+# raw data template header
 INJECTION_VOL = "250.0"
 UNIT          = "㎍/L"
 DILUTION      = "0.8810"
@@ -50,6 +61,7 @@ RUN_TIME      = "35.00"
 output_dir = os.path.expanduser("~/automation.proj/raw.data")
 os.makedirs(output_dir, exist_ok=True)
 
+# analyte 이 이상치일 경우
 def generate_value(p, is_outlier=False):
     if is_outlier:
         direction  = random.choice([-1, 1])
@@ -75,7 +87,12 @@ while current_date <= END_DATE:
     date_str  = f"{mm}/{dd}"
     date_code = f"{yy}{mm}{dd}"
 
+    # 하루 생성할 Lot. 갯수 시뮬
+    # -> 하루 간 검사할 샘플 수가 일정하지 않기 때문에 보통 60±5 Lot. 측정한다고 가정함
     count_today = random.randint(55, MAX_PER_DAY)
+
+    # Lot. number 시뮬
+    # -> Lot.에 기록되는 세자릿수 batch number가 001~076 사이의 임의의 수가 되도록 설정
     seq_pool    = random.sample(range(1, 76), min(count_today, 75))
     seq_pool.sort()
 
@@ -85,8 +102,10 @@ while current_date <= END_DATE:
 
         sample_name = f"{car} {date_str} {date_code}{seq_str}"
         instrument  = random.choice(INSTRUMENTS)
-
+        # 현재 다루고 있는 파일이 이상치를 가질 것인지 결정
         has_outlier     = random.random() < OUTLIER_PROB
+
+        # outlier_analyte은 사용자 정의 함수에서 인자로 사용함
         outlier_analyte = random.choice(list(params.keys())) if has_outlier else None
         if has_outlier:
             outlier_count += 1
