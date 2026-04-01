@@ -207,10 +207,17 @@ marimo/_lsp/
 __marimo__/
 
 # Project data folders
+# how to keep a case but contents
+# ex) if there's the folder named 'ex'
+# ex/* --> means ignoring all of the 'ex'
+# !ex/.keep --> means not ignoring the file named '.keep'
+
 raw.data/*
 processed/*
 reports/*
+logs/*
 
 !raw.data/.keep
 !processed/.keep
 !reports/.keep
+!logs/.keep
