@@ -1,4 +1,4 @@
--## automation project
+## automation project
 네트워크 환경에서 데이터 파이프라인 구축  
 
 
