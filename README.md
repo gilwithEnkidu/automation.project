@@ -16,7 +16,7 @@
 
 ## 구조 - 폴더 및 네트워크
 <img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/f57432b3-fe81-4e5a-8a05-25a2b30141d4" /><br/>
-<div style="text-align: left"> 네트워크 구조 </div>  
+<div style="text-align: center"> 네트워크 구조 </div>  
 
   
 ***  
