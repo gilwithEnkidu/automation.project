@@ -16,10 +16,12 @@
 
 ## 구조 - 폴더 및 네트워크
 <img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/f57432b3-fe81-4e5a-8a05-25a2b30141d4" />  
-**네트워크 구조**  
-***
+<br/>
+**네트워크 구조** <br/>
+***  
+
 <img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/ae24236f-9b18-447e-8b95-eb34084c5eec" />  
-**폴더 구조**  
+**폴더 구조** <br/>
 
   
 ## 기술스택
