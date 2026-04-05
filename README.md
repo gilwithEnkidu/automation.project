@@ -18,4 +18,4 @@
 <img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/f57432b3-fe81-4e5a-8a05-25a2b30141d4" />  
 
 ## 기술스택
-![Python](https://img.shields.io/badge/Python-3.12.3-blue?style=plastic&logo=Python&logoColor=3776AB) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169e1%3Flogo%3Dpostgresql%26logoColor%3Dwhite)
+![Python](https://img.shields.io/badge/Python-3.12.3-blue?style=plastic&logo=Python&logoColor=3776AB) ![PostgreSQL](https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white))
