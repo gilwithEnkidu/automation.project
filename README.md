@@ -16,6 +16,11 @@
 
 ## 구조 - 폴더 및 네트워크
 <img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/f57432b3-fe81-4e5a-8a05-25a2b30141d4" />  
+**네트워크 구조**  
+***
+<img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/ae24236f-9b18-447e-8b95-eb34084c5eec" />  
+**폴더 구조**  
 
+  
 ## 기술스택
 ![Python](https://img.shields.io/badge/Python-3.12.3-blue?style=plastic&logo=Python&logoColor=3776AB) ![PostgreSQL](https://img.shields.io/badge/postgresql-4169e1?style=plastic&logo=postgresql&logoColor=white) ![GIT](https://img.shields.io/badge/git-F05032?style=plastic&logo=git&logoColor=white)
