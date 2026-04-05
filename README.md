@@ -15,14 +15,17 @@
 		raw data 정제 - 주요 데이터가 규격에 벗어나는지 또는 결측치인지 판단하여 기록  
 
 ## 구조 - 폴더 및 네트워크
+<div align="center">
 <img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/f57432b3-fe81-4e5a-8a05-25a2b30141d4" /><br/>
-<div style="text-align: center"> 네트워크 구조 </div>  
+ <br>
+  <strong>네트워크 구조</strong>
 
+  <hr>
   
-***  
-
 <img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/ae24236f-9b18-447e-8b95-eb34084c5eec" /><br/>
-<center>폴더 구조</center><br/>
+**폴더 구조**  
+
+</div>
 <br/>
 
   
