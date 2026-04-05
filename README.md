@@ -15,8 +15,7 @@
 		raw data 정제 - 주요 데이터가 규격에 벗어나는지 또는 결측치인지 판단하여 기록  
 
 ## 구조 - 폴더 및 네트워크
-<img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/f57432b3-fe81-4e5a-8a05-25a2b30141d4" />  
-<br/>
+<img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/f57432b3-fe81-4e5a-8a05-25a2b30141d4" /><br/>
 **네트워크 구조** <br/>
 ***  
 
