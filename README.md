@@ -15,7 +15,7 @@
 		raw data 정제 - 주요 데이터가 규격에 벗어나는지 또는 결측치인지 판단하여 기록  
 
 ## 구조 - 폴더 및 네트워크
-  
+<img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/f57432b3-fe81-4e5a-8a05-25a2b30141d4" />  
 
 ## 기술스택
-  
+https://img.shields.io/badge/Python-3.12.3-blue?style=plastic&logo=Python&logoColor=3776AB https://img.shields.io/badge/PostgreSQL-4169e1%3Flogo%3Dpostgresql%26logoColor%3Dwhite
