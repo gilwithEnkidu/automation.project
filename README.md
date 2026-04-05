@@ -22,7 +22,7 @@
 ***  
 
 <img width="960" height="540" alt="Image" src="https://github.com/user-attachments/assets/ae24236f-9b18-447e-8b95-eb34084c5eec" /><br/>
-<center>**폴더 구조**</center><br/>
+<center>폴더 구조</center><br/>
 <br/>
 
   
