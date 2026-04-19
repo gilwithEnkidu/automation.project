@@ -30,7 +30,7 @@ from datetime import date, timedelta
 # ── 사용자 설정 ──────────────────────────────────────────
 START_DATE  = date(2026, 3, 1)
 END_DATE    = date(2026, 3, 31)
-MAX_PER_DAY = 65    # 하루 동안 생성되는 raw data 의 최대치
+MAX_PER_DAY = 23    # 하루 동안 생성되는 raw data 의 최대치
 
 # 이상치 설정, 발생확률 0.4%
 OUTLIER_PROB  = 0.004
@@ -58,7 +58,7 @@ DILUTION      = "0.8810"
 INSTRUMENTS   = ["IC-5000-5 [p1]", "IC-5000-5 [p2]", "IC-5000-10 [p1]"]
 RUN_TIME      = "35.00"
 
-output_dir = os.path.expanduser("~/automation.proj/raw.data")
+output_dir = os.path.expanduser("~/automation.project/raw.data")
 os.makedirs(output_dir, exist_ok=True)
 
 # analyte 이 이상치일 경우
@@ -89,7 +89,7 @@ while current_date <= END_DATE:
 
     # 하루 생성할 Lot. 갯수 시뮬
     # -> 하루 간 검사할 샘플 수가 일정하지 않기 때문에 보통 60±5 Lot. 측정한다고 가정함
-    count_today = random.randint(55, MAX_PER_DAY)
+    count_today = random.randint(19, MAX_PER_DAY)
 
     # Lot. number 시뮬
     # -> Lot.에 기록되는 세자릿수 batch number가 001~076 사이의 임의의 수가 되도록 설정
